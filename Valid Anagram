@@ -1,0 +1,15 @@
+ int freqtable[256]={0};
+        for(int i=0;i<s1.size();i++){
+            freqtable[s1[i]]++;
+        }
+        
+        for(int i=0;i<s2.size();i++){
+            freqtable[s2[i]]--;
+        }
+        
+        for(int i=0;i<256;i++){
+            if(freqtable[i] !=0){
+                return false;
+            }
+        }
+        return true;
